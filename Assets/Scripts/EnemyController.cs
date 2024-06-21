@@ -7,6 +7,8 @@ public class EnemyController : MonoBehaviour
 {
     [SerializeField] float chaseRange = 10f;
     [SerializeField] float turnSpeed = 5f;
+    [SerializeField] AudioClip attackSound;
+    [SerializeField] AudioClip damageSound;
 
     NavMeshAgent navMeshAgent;
     float distanceToTarget = Mathf.Infinity;
@@ -72,7 +74,9 @@ public class EnemyController : MonoBehaviour
 
     void AttackTarget()
     {
+
         GetComponent<Animator>().SetBool("attack", true);
+        GetComponent<AudioSource>().PlayOneShot(attackSound);
         //Debug.Log(name + " has seeked and is destroying " + target.name);
     }
 
@@ -86,5 +90,7 @@ public class EnemyController : MonoBehaviour
     public void OnDamageTaken()
     {
         isProvoked = true;
+        GetComponent<AudioSource>().PlayOneShot(damageSound);
+
     }
 }

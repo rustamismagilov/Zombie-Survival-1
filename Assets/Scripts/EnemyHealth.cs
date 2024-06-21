@@ -5,8 +5,14 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] float hitPoints = 100f;
+    [SerializeField] Collider myCollider;
 
     bool isDead = false;
+
+    void Start()
+    {
+        myCollider = GetComponent<Collider>();
+    }
 
     public void TakeDamage(float damage)
     {
@@ -29,5 +35,6 @@ public class EnemyHealth : MonoBehaviour
         if (isDead) return;
         isDead = true;
         GetComponent<Animator>().SetTrigger("die");
+        myCollider.enabled = false;
     }
 }
