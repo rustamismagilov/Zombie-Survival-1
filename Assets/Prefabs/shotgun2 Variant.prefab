@@ -89,14 +89,14 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30f0edbb0fc30ff42aa76dde37cee116, type: 3}
---- !u!4 &4852392917797308631 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7069623487233972621, guid: 30f0edbb0fc30ff42aa76dde37cee116, type: 3}
-  m_PrefabInstance: {fileID: 1917208470298257893}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &8510056189802704815 stripped
+--- !u!198 &5605276514456852240 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 6292298030761983733, guid: 30f0edbb0fc30ff42aa76dde37cee116, type: 3}
+  m_PrefabInstance: {fileID: 1917208470298257893}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8684932296851697768 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7069623487233972621, guid: 30f0edbb0fc30ff42aa76dde37cee116, type: 3}
   m_PrefabInstance: {fileID: 1917208470298257893}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2399135182007882074
@@ -188,7 +188,7 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8b36fb41929fc22429f0083d817b8040, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4852392917797308631}
+      addedObject: {fileID: 8684932296851697768}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8b36fb41929fc22429f0083d817b8040, type: 3}
       insertIndex: -1
@@ -196,6 +196,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8b36fb41929fc22429f0083d817b8040, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7385952292545072856}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8b36fb41929fc22429f0083d817b8040, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 831267711201371356}
   m_SourcePrefab: {fileID: 100100000, guid: 8b36fb41929fc22429f0083d817b8040, type: 3}
 --- !u!4 &2792735078420428465 stripped
 Transform:
@@ -221,13 +224,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 0}
   range: 100
-  damage: 25
-  muzzleFlash: {fileID: 8510056189802704815}
+  damage: 40
+  muzzleFlash: {fileID: 5605276514456852240}
   hitEffect: {fileID: 3073334848392643486, guid: ea1779f85d07b214985ad42a0aed6adb, type: 3}
   ammoSlot: {fileID: 0}
-  timeBetweenShots: 0.5
+  timeBetweenShots: 0.8
   ammoType: 1
   ammoText: {fileID: 0}
+  weaponAnimator: {fileID: 831267711201371356}
   canShoot: 1
 --- !u!82 &7385952292545072856
 AudioSource:
@@ -325,3 +329,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &831267711201371356
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3281463235638062091}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4eba2cb3d89080c47872e1bc7e65fdb8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
