@@ -5663,6 +5663,30 @@ PrefabInstance:
       propertyPath: ammoText
       value: 
       objectReference: {fileID: 530454974}
+    - target: {fileID: 5234278398244895850, guid: 71c7aa2da1b369643aea6cf3064fc036, type: 3}
+      propertyPath: hitEffect
+      value: 
+      objectReference: {fileID: 3073334848392643486, guid: ea1779f85d07b214985ad42a0aed6adb, type: 3}
+    - target: {fileID: 5234278398244895850, guid: 71c7aa2da1b369643aea6cf3064fc036, type: 3}
+      propertyPath: muzzleFlash
+      value: 
+      objectReference: {fileID: 313028705}
+    - target: {fileID: 5234278398244895850, guid: 71c7aa2da1b369643aea6cf3064fc036, type: 3}
+      propertyPath: sprayFactor
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5234278398244895850, guid: 71c7aa2da1b369643aea6cf3064fc036, type: 3}
+      propertyPath: weaponAnimator
+      value: 
+      objectReference: {fileID: 771221501}
+    - target: {fileID: 5234278398244895850, guid: 71c7aa2da1b369643aea6cf3064fc036, type: 3}
+      propertyPath: timeBetweenShots
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5234278398244895850, guid: 71c7aa2da1b369643aea6cf3064fc036, type: 3}
+      propertyPath: numberOfProjectiles
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8544084360502074722, guid: 71c7aa2da1b369643aea6cf3064fc036, type: 3}
       propertyPath: m_Name
       value: pistol1
@@ -8791,6 +8815,14 @@ PrefabInstance:
       propertyPath: ammoText
       value: 
       objectReference: {fileID: 530454974}
+    - target: {fileID: 4015846136449485394, guid: 0e7601fc0ad619f4680052b0dde69b66, type: 3}
+      propertyPath: sprayFactor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015846136449485394, guid: 0e7601fc0ad619f4680052b0dde69b66, type: 3}
+      propertyPath: timeBetweenShots
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
