@@ -27,9 +27,9 @@ public class AudioPlayer : MonoBehaviour
     {
         if (clip != null) // checks if the clip parameter is not null
         {
-            Vector3 cameraPos = Camera.main.transform.position; // If the clip is valid, it gets the position of the main camera (cameraPos)
-            AudioSource.PlayClipAtPoint(clip, cameraPos, volume); // It uses AudioSource.PlayClipAtPoint to play the clip at the camera's position with the specified volume.
-                                                                  // This ensures the sound is played in a 3D space, centered on the camera, making it audible regardless
+            Vector3 cameraPos = Camera.main.transform.position; // If the clip is valid, it gets the position of the main myCamera (cameraPos)
+            AudioSource.PlayClipAtPoint(clip, cameraPos, volume); // It uses AudioSource.PlayClipAtPoint to play the clip at the myCamera's position with the specified volume.
+                                                                  // This ensures the sound is played in a 3D space, centered on the myCamera, making it audible regardless
                                                                   // of the listener's position in the game world
         }
     }

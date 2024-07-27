@@ -74,7 +74,6 @@ public class EnemyController : MonoBehaviour
 
     void AttackTarget()
     {
-
         GetComponent<Animator>().SetBool("attack", true);
         GetComponent<AudioSource>().PlayOneShot(attackSound);
         //Debug.Log(name + " has seeked and is destroying " + target.name);
@@ -91,6 +90,5 @@ public class EnemyController : MonoBehaviour
     {
         isProvoked = true;
         GetComponent<AudioSource>().PlayOneShot(damageSound);
-
     }
 }

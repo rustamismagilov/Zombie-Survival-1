@@ -5,7 +5,7 @@ using TMPro;
 
 public class Weapon : MonoBehaviour
 {
-    [SerializeField] Camera camera;
+    [SerializeField] Camera myCamera;
     [SerializeField] float range = 100f;
     [SerializeField] float damage = 30f;
     [SerializeField] ParticleSystem muzzleFlash;
@@ -87,7 +87,7 @@ public class Weapon : MonoBehaviour
     {
         Vector3 direction = GetSpreadDirection();
         RaycastHit hit;
-        if (Physics.Raycast(camera.transform.position, direction, out hit, range))
+        if (Physics.Raycast(myCamera.transform.position, direction, out hit, range))
         {
             CreateHitImpact(hit);
             EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
@@ -120,7 +120,7 @@ public class Weapon : MonoBehaviour
 
     Vector3 GetSpreadDirection()
     {
-        Vector3 direction = camera.transform.forward;
+        Vector3 direction = myCamera.transform.forward;
         direction.x += Random.Range(-bulletSpread, bulletSpread);
         direction.y += Random.Range(-bulletSpread, bulletSpread);
         return direction;

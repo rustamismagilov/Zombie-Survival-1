@@ -9,7 +9,6 @@ public class DeathHandler : MonoBehaviour
     [SerializeField] FirstPersonController playerController;
     Weapon weapon;
 
-
     private void Start()
     {
         gameOverCanvas.enabled = false;
@@ -19,11 +18,10 @@ public class DeathHandler : MonoBehaviour
     public void HandleDeath()
     {
         gameOverCanvas.enabled = true;
-        
+        Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         playerController.enabled = false;
         weapon.canShoot = false;
-        Time.timeScale = 0;
     }
 }
